@@ -1,0 +1,26 @@
+Step 2.  Install zrok
+# For a Debian/Ubuntu/Kali environment, use the official installation script:
+curl -sSf https://get.openziti.io/install.bash | sudo bash -s zrok
+zrok version
+
+Step 2. Create a free account
+Open zrok account registration⁠.
+# https://myzrok.io/dashboard
+Create your account.
+Sign in to the zrok console.
+Obtain your environment enable token.
+
+Step 3. enable 
+zrok enable YOUR_ACCOUNT_TOKEN
+zrok status
+
+
+Step 4. Testing 
+mkdir -p ~/public-site
+cd ~/public-site
+echo '<h1>My Linux Website is Online!</h1>' > index.html
+
+zrok share public --backend-mode web .
+
+Step 5. Run.sh
+zrok share public http://127.0.0.1:8280
